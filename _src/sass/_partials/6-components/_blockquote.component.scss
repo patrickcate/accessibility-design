@@ -1,0 +1,45 @@
+// =============================================================================
+// @name Blockquote Component
+// @description Styling a blockquote.
+// @group components
+// @file src/sass/_partials/5-components/_blockquote.component.scss
+// =============================================================================
+
+.c-blockquote, p {
+  font-family: $serif-font;
+  
+  // &::before, &::after {
+  // }
+  
+  // &::before {
+  //   content: '\201C';
+  // }
+  // 
+  // &::after {
+  //   content: '\201D';
+  // }
+}
+
+.c-blockquote__citation {
+  display: block;
+  font-family: $sans-font;
+  font-style: normal;
+  font-size: 75%;
+  
+  &::before {
+    content: '\2013';
+  }
+}
+
+
+// Hero Blockquote variant
+// -------------------------------------
+
+.c-blockquote--hero {
+  @include fluid-type('font-size', $break-xs, $break-max, $font-size-sm, $font-size-xl);
+
+  &::before, &::after {
+    font-size: $font-size-xl;
+    font-size: ms(7);
+  }
+}

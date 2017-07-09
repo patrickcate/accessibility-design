@@ -1,0 +1,38 @@
+<header class="o-page__header" role="banner">
+  <div class="o-page__inner c-header">
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    
+    <nav role="navigation">
+      <ul class="c-navbar">
+        {% for link in site.data.navigation %} 
+          {% if page.id == link.id %}
+            <li class="c-navbar__item c-navbar__item--level-1 c-navbar__item--{{link.id}}">
+              <a href="{{link.url}}" class="c-navbar__link c-navbar__link--level-1 navbar__link--{{link.id}} c-navbar__item--is-active"><span class="c-navbar__text">{{link.id | capitalize}}</span></a>
+              {% if link.subgroup[0] %}
+                <ul class="c-navbar__submenu">
+                  {% for sublink in link.subgroup %}
+                    <li class="c-navbar__item c-navbar__item--level-2 c-navbar__item--{{sublink.id}}">
+                    <a href="{{sublink.url}}" class="c-navbar__link c-navbar__link--level-2 navbar__link--{{sublink.id}} c-navbar__item--is-active"><span class="c-navbar__text">{{sublink.id | capitalize}}</span></a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %} 
+            </li>
+          {% else %}
+            <li class="c-navbar__item c-navbar__item--level-1 c-navbar__item--{{link.id}}"><a href="{{link.url}}" class="c-navbar__link c-navbar__link--level-2 c-navbar__link--{{link.id}}"><span class="c-navbar__text">{{link.id | capitalize}}</span></a>
+              {% if link.subgroup[0] %}
+                <ul class="c-navbar__submenu">
+                  {% for sublink in link.subgroup %}
+                    <li class="c-navbar__item c-navbar__item--level-2 c-navbar__item--{{sublink.id}}">
+                    <a href="{{sublink.url}}" class="c-navbar__link c-navbar__link--level-2 navbar__link--{{sublink.id}}"><span class="c-navbar__text">{{sublink.id | capitalize}}</span></a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %} 
+            </li>
+          {% endif %} 
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

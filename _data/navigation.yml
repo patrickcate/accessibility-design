@@ -1,0 +1,23 @@
+- id: home
+  url: /
+
+- id: about
+  url: /about/
+
+- id: topics
+  url: /topics/
+  subgroup:
+    - id: general
+      url: /topics/general/
+    
+    - id: color
+      url: /topics/color/
+
+    - id: typography
+      url: /topics/typography/
+
+    - id: layout
+      url: /topics/layout/
+
+    - id: media
+      url: /topics/media/

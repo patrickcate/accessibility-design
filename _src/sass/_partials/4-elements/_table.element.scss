@@ -1,0 +1,40 @@
+// =============================================================================
+// @name Table Elements
+// @description Base CSS for table related tags.
+// @group elements
+// @file src/sass/_partials/3-elements/_table.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: $font-medium;
+  background-color: set-color(primary);
+  color: $bg-color;
+}
+
+th, td {
+  padding: 0 $half-spacing;
+
+}
+
+tr {
+  &:nth-of-type(even) {
+    td {
+      background-color: $white;
+    }
+  }
+}
+
+// th {
+//
+// }
+
+// td {
+//
+// }

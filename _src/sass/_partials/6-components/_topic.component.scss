@@ -1,0 +1,96 @@
+// =============================================================================
+// @name Topic Component
+// @description Styling page topic.
+// @group components
+// @file src/sass/_partials/5-components/_topic.component.scss
+// =============================================================================
+
+.c-topic {
+  @include clearfix;
+  
+  @include media('>#{$break-one-sidebar}') {
+    margin-right: $gutter;
+  }
+  
+  @include media('>#{$break-two-sidebars}') {
+    margin-left: $gutter;
+  }
+}
+
+// .c-topic__header {
+// }
+
+.c-topic__content {
+  @include media('>lg') {
+    font-size: $font-size-xs + rem(2px);
+  }
+  
+  @include media('>xl') {
+    // font-size: rem(20px);
+  }
+}
+
+.c-topic__figure {
+  margin-bottom: $spacing;
+  position: relative;
+}
+
+.c-topic__figure--left, .c-topic__figure--right {
+  @include media('>sm') {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.c-topic__figure--left {
+  @include media('>sm') {
+    float: left;
+    margin-right: $spacing;
+  }
+
+  @include media('>#{$break-two-sidebars}') {
+    flex-direction: row;
+
+    .c-topic__figure-caption {
+      position: absolute;
+      max-width: $gutter;
+      height: 100%;
+      left: -#{$gutter};
+      padding-right: $spacing;
+      border-right: 1px solid set-color(tertiary);
+    }
+  }
+}
+
+.c-topic__figure--right {
+  
+  @include media('>sm') {
+    float: right;
+    margin-left: $spacing;
+  }
+
+  @include media('>#{$break-one-sidebar}') {
+    flex-direction: row;
+
+    .c-topic__figure-caption {
+      position: absolute;
+      max-width: $gutter;
+      height: 100%;
+      right: -#{$gutter};
+      padding-left: $spacing;
+      border-left: 1px solid set-color(tertiary);
+    }
+  }
+}
+
+.c-topic__figure-img {
+}
+
+.c-topic__figure-caption {
+  font-size: $font-size-xs;
+
+  @include media('>xxl') {
+    font-size: $font-size-xs + rem(2px);
+  }
+}

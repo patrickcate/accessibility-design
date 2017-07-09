@@ -1,0 +1,67 @@
+// =============================================================================
+// @name Navbar Component
+// @description Styling for a standard navbar.
+// @group components
+// @file src/sass/_partials/5-components/_navbar.component.scss
+// =============================================================================
+
+.c-navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-navbar__item--level-1 {
+
+  &:first-child {
+    margin-left: auto;
+  }
+  
+  &:not(last-of-type) {
+    margin-left: $spacing;
+  }
+}
+
+.c-navbar__link {
+  display: block;
+  padding: $spacing 0;
+  text-decoration: none;
+  color: set-color(primary);
+  font-weight: $font-medium;
+  font-size: $font-size-xs;
+
+  @include media('>md') {
+    font-size: $font-size-sm;
+  }
+
+  &:hover {
+    color: set-color(primary, dark);
+
+    .c-navbar__text {
+      border-bottom-color: set-color(primary, darker);
+    }
+  }
+}
+
+.c-navbar__link--is-active {
+  text-transform: uppercase;
+}
+
+.c-navbar__text {
+  border-bottom: 2px solid transparent;
+}
+
+.c-navbar__submenu {
+    display: none;
+}
+
+// .c-navbar--level-2 {
+//
+// }
+
+// .c-navbar__item--level-2 {
+//
+// }
+
+// .c-navbar__link--level-2 {
+//
+// }

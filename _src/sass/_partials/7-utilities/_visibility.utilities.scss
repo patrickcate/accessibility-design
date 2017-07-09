@@ -1,0 +1,69 @@
+// =============================================================================
+// @name Visiblity Utilities
+// @description Utility visiblity classes.
+// @group utilities
+// @file src/sass/_partials/7-utilities/_visibility.utilities.scss
+// =============================================================================
+
+// Only show elements to screen readers.
+.u-sr-only {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(50%);
+}
+
+// Used in conjunction with u-sr-only to make element focusable.
+.u-sr-only--focusable {
+  &:active, &:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+    white-space: normal;
+    clip-path: none;
+  }
+}
+
+// We have to import the include media hidden classes library here because
+// it needs the $breakpoints variables set before it can be used.
+@import '../2-vendor/include-media-hidden-classes/_include-media-hidden-classes';
+
+// Generate @media hidden classes.
+@include im-hidden-classes();
+
+.u-inline {
+  display: inline!important;
+}
+
+.u-inline-block {
+  display: inline-block!important;
+}
+
+.u-block {
+  display: block!important;
+}
+
+.u-inline-flex {
+  display: inline-flex!important;
+}
+
+.u-flex {
+  display: flex!important;
+}
+
+// We have to import the include media visiblity classes library here because
+// it needs the $breakpoints variables set before it can be used.
+@import '../2-vendor/include-media-visible-classes/_include-media-visible-classes';
+
+// Generate @media screen visibility classes.
+@include im-visible-classes();
+
+// Generate @media print visibility classes.
+@include im-print-visible-classes;

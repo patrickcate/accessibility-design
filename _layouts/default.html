@@ -1,0 +1,19 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+  <html lang="en" class="no-js">
+  {% include head.html %}
+  <body>
+    <a href="#main-content" class="u-sr-only u-sr-only--focusable">Skip to main content</a>
+    <div class="o-page">
+        {% include header.html %}
+        <main id="main-content" role="main" class="">
+          {{ content }}
+        </main>
+        {% include footer.html %}
+    </div>
+    <script src="/assets/js/modernizr/modernizr-custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.7.0/EQCSS.min.js"></script>
+  </body>
+</html>

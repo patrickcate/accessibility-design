@@ -1,0 +1,74 @@
+// =============================================================================
+// @name Grid Settings
+// @description General project grid and spacing settings, as well as settings
+//              for grid libraries such as Susy.
+// @group settings
+// @file src/sass/_partials/1-tools/4-settings/_grid.settings.scss
+// =============================================================================
+
+// Setup a base measurement system based on the body font size.
+$spacing: rem($base-font-size);
+// $spacing: rem($base-font-size) * $base-line-height;
+$three-quarter-spacing: $spacing * 0.75;
+$half-spacing: $spacing / 2;
+$quarter-spacing: $spacing / 4;
+$eighth-spacing: $spacing / 8;
+$double-spacing: $spacing * 2;
+
+$gutter: $spacing * 16;
+
+// Set grid parameters to use with Susy.
+$total-columns: 12;
+$column-width: $spacing * 2;
+
+// Set Susy map settings.
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: inside-static,
+  container: $max-width,
+  container-position: center,
+  columns: $total-columns,
+  gutters: 0.5,
+  column-width: $column-width,
+  global-box-sizing: border-box,
+  last-flow: to,
+);
+
+$neat-grid: (
+  columns: $total-columns,
+  gutter: $spacing,
+);
+
+// Set default border-width.
+$base-border-width: 2px;
+
+// include-media-grid-settings.
+// Grid class name
+$im-grid-class: 'o-grid';
+
+// Cell class name.
+$im-grid-cell-class: 'o-grid__cell';
+
+// Use gutters by default.
+$im-gutters-default: true;
+
+// Gutter size.
+$im-grid-gutter-size: $spacing;
+
+// Optionally include max-width to fix IE issues.
+$im-grid-include-max-width: true;
+
+// Set include media columns class.
+$im-columns-class: '.u-width';
+
+$im-susy-grid-grid-class: 'o-grid';
+$im-susy-grid-cell-class: 'o-grid__cell';
+$im-susy-grid-row-class: 'o-row';
+$im-susy-grid-col-class: 'o-row__col';
+$im-susy-grid-fraction-separator: \/;
+// $im-susy-grid-include-pre: true;
+// $im-susy-grid-include-post: true;
+// $im-susy-grid-include-pull: true;
+// $im-susy-grid-include-squish: true;

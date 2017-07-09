@@ -1,0 +1,44 @@
+// =============================================================================
+// @name Facade Print Styles
+// @description Main import stylesheet for Facade theme's print specific styles.
+// @group import
+// @file src/sass/facade-print.styles.scss
+//
+// TABLE OF CONTENTS:
+// [1] Tools ---------- Vendor libraries and custom Sass functions, mixins, and
+//     variables. Nothing in the core import generates CSS by default.
+// ↑ ---------------- ↑ NO CSS GENERATED ABOVE THIS POINT.
+// [2] Vendor --------- Third party Sass and CSS libraries that generate CSS
+//     by default.
+// [3] Generic -------- Reset and/or normalize styles, global style
+//     definitions.
+// [4] Elements ------- Unclassed HTML elements (e.g. `h2`, `ul`) styling.
+// =============================================================================
+
+
+// [1] Tools
+// =====================================
+@import '_partials/1-tools/_tools.import';
+
+
+// [2] Vendor
+// =====================================
+@import '_partials/2-vendor/_normalize.generic';
+
+
+// [3] Generic
+// ======================================
+@import '_partials/3-generic/_globals.generic';
+@import '_partials/3-generic/_shared.generic';
+
+
+// [4] Elements
+// =====================================
+@import '_partials/4-elements/_form.element';
+@import '_partials/4-elements/_header.element';
+@import '_partials/4-elements/_image.element';
+@import '_partials/4-elements/_link.element';
+@import '_partials/4-elements/_list.element';
+@import '_partials/4-elements/_page.element';
+@import '_partials/4-elements/_table.element';
+@import '_partials/4-elements/_typography.element';
